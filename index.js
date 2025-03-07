@@ -5,7 +5,7 @@ function getAverageGrade(student, course) {
         for (let grade of transRec.grades) {
           sum += grade;
         }
-        return sum / 3;
+        return sum / transRec.grades.length;
       }
   }
   return -1;
@@ -14,7 +14,7 @@ function getAverageGrade(student, course) {
 function getAssignmentMark(student, course, num) {
   for (let transRec of student.transcript) {
       if (transRec.course === course) {
-          if (num >= 1 && num <= 3) {
+          if (num >= 1 && num <= transRec.grades.length) {
               return transRec.grades[num - 1]; 
           }
       }
