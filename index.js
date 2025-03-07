@@ -85,3 +85,6 @@ let paul = {
 };
 
 const students = [bob, sally, paul];
+console.log(getAverageGrade(bob, 'INFO 1603'));
+console.log(getAssignmentMark(sally, 'INFO 1601', 2));
+console.log(averageAssessment(students, 'INFO 1601', 2));
